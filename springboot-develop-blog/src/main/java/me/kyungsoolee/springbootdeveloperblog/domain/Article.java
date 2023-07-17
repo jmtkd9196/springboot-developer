@@ -29,7 +29,7 @@ public class Article {
     @Column(name = "content", nullable = false)
     private String content;
 
-    @Builder    // 필더 패턴으로 객체 생성 (롬복에서 지원하는 애너테이션)
+    @Builder    // 빌더 패턴으로 객체 생성 (롬복에서 지원하는 애너테이션)
     public Article(String title, String content) {
         this.title = title;
         this.content = content;
