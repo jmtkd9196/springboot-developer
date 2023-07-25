@@ -20,7 +20,7 @@ public class UserApiController {
     @PostMapping("/user")
     public String signup(AddUserRequest request) {
         userService.save(request);  // 회원 가입 메서드 호출
-        return "redirection:/login";
+        return "redirect:/login";
     }
 
     @GetMapping("/logout")
