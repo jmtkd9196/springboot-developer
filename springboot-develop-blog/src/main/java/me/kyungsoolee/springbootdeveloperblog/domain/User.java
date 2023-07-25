@@ -39,9 +39,15 @@ public class User implements UserDetails {  // UserDetails를 상속받아 인�
         return List.of(new SimpleGrantedAuthority("user"));
     }
 
-    // 사용자의 패스워드를 반환
+    // 사용자의 id를 반환(고유한 값)
     @Override
     public String getUsername() {
+        return email;
+    }
+
+    // 사용자의 패스워드를 반환
+    @Override
+    public String getPassword() {
         return password;
     }
 
